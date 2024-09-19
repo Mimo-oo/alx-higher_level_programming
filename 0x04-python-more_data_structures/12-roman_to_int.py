@@ -1,56 +1,13 @@
 #!/usr/bin/python3
-
-
-def convert_roman(ch):
-    ret = -1
-    if ch == 'I':
-        ret = 1
-    elif ch == 'V':
-        ret = 5
-    elif ch == 'X':
-        ret = 10
-    elif ch == 'L':
-        ret = 50
-    elif ch == 'C':
-        ret = 100
-    elif ch == 'D':
-        ret = 500
-    elif ch == 'M':
-        ret = 1000
-    return ret
-
-
 def roman_to_int(roman_string):
-    cur_max = -1
-    cur = conv = 0
-    holder = []
-
-    if roman_string is None or type(roman_string) is not str:
+    if type(roman_string) is not str or roman_string is None:
         return 0
-    for c in roman_string:
-        cur = convert_roman(c)
-        if cur == -1:
-            return 0
-        if len(holder) == 0:
-            if cur == cur_max or cur_max == -1:
-                cur_max = cur
-                conv += cur
-            elif cur < cur_max:
-                holder.append(cur)
-            elif cur > cur_max:  # only happens if smaller is starting number
-                # for example: IIX, VXC
-                cur_max = cur
-                cur -= conv
-                conv = cur
+    nums = {'M': 1000, 'D': 500, 'C': 100, 'L': 50, 'X': 10, 'V': 5, 'I': 1}
+    sum = 0
+    for i in range(len(roman_string)):
+        value = nums[roman_string[i]]
+        if i + 1 < len(roman_string) and nums[roman_string[i + 1]] > value:
+            sum -= value
         else:
-            if cur > holder[-1]:
-                cur_max = cur
-                cur -= sum(holder)
-                conv += cur
-                holder.clear()
-            else:
-                holder.append(cur)
-
-    if len(holder) != 0:
-        conv += sum(holder)
-    return conv
+            sum += value
+    return sum
