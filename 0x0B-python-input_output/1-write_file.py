@@ -1,7 +1,5 @@
-#!/bin/bash/python3
-
+#!/usr/bin/python3
 """A function that writes a string to a text file"""
-
 
 
 def write_file(filename="", text=""):
@@ -9,10 +7,7 @@ def write_file(filename="", text=""):
     """
         Writing into a file
     """
+    with open(filename, 'w', encoding="utf-8") as f:
+        write_data = f.write(text)
 
-
-
-    with open(filename, "w", encoding="utf-8") as f:
-        write_text = f.write(text)
-
-    return write_text
+    return write_data
