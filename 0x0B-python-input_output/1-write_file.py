@@ -11,7 +11,7 @@ def write_file(filename="", text=""):
     """
 
 
-    with open(filename, "w", encoding="utf-8"):
+    with open(filename, "w", encoding="utf-8") as f:
         write_text = f.write(text)
 
     return write_text
