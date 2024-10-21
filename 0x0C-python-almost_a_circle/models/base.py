@@ -18,5 +18,5 @@ class Base:
             self.id = int(id)
 
         else:
-            __nb_objects += 1
-            self.id = __nb_objects
+           Base.__nb_objects += 1
+            self.id = Base.__nb_objects
