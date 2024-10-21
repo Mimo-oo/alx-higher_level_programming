@@ -25,7 +25,7 @@ class Rectangle(Base):
         """
         return self.__width
 
-    @setter.width
+    @width.setter
     def width(self, value):
         """
         Width setter
@@ -37,10 +37,9 @@ class Rectangle(Base):
         """
         height getter
         """
-
         return self.__height
 
-    @setter.height
+    @height.setter
     def height(self, value):
         """
         height setter
@@ -56,7 +55,7 @@ class Rectangle(Base):
 
         return self.__x
 
-    @setter.x
+    @x.setter
     def x(self, value):
         """
         x setter
@@ -72,7 +71,7 @@ class Rectangle(Base):
 
         return self.__y
 
-    @setter.y
+    @y.setter
     def y(self, value):
         """
         y setter
