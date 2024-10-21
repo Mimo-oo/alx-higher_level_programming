@@ -104,3 +104,13 @@ class Rectangle(Base):
 
         return area
 
+    def display(self):
+        """
+        Prints size of rectangle using #
+        """
+        for _ in range(self.y):
+            print()
+
+        for _ in range(self.height):
+            print(" " * self.x + "#" * self.width)
+
