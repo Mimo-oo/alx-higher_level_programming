@@ -32,7 +32,6 @@ class Base:
         """
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
-        else:
-            with open(list_dictionaries, "r", encoding"utf-8") as f:
-                to_json = f.dumps(list_dictionaries)
-            return to_json
+        to_json = f.dumps(list_dictionaries)
+
+        return to_json
