@@ -3,6 +3,7 @@
 """
 Defines a base model class.
 """
+impot json
 
 
 class Base:
@@ -26,6 +27,8 @@ class Base:
     def to_json_string(list_dictionaries):
         """
         Returns JSON representation of list_dictionaries
+        Args:
+            list_dictionaries (list): a list of dictionaries
         """
         if list_dictionaries is None or list_dictionaries == []:
             return "[]"
