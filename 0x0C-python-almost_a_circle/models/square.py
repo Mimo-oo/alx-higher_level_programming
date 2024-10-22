@@ -36,7 +36,7 @@ class Square(Rectangle):
         """
         Updating the square
         """
-        if args and len(args) != 0:
+        if args:
             for count, arg in enumerate(args):
                 if count == 0:
                     self.id = arg
