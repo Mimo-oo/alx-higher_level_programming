@@ -164,9 +164,9 @@ class Rectangle(Base):
 
         rectangle_dict = {
                 "id": self.id,
-                "width": self.width
-                "height": self.height
-                "x": self.x
+                "width": self.width,
+                "height": self.height,
+                "x": self.x,
                 "y": self.y
         }
 
