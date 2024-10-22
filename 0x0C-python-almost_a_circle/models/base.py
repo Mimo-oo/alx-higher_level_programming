@@ -3,7 +3,7 @@
 """
 Defines a base model class.
 """
-impot json
+import json
 
 
 class Base:
