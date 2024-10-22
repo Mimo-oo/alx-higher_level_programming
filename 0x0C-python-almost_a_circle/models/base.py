@@ -27,7 +27,7 @@ class Base:
         """
         Returns JSON representation of list_dictionaries
         """
-        if list_dictionaries is None or list_dictionaries == {}:
+        if list_dictionaries is None or list_dictionaries == []:
             return "[]"
         else:
             with open(list_dictionaries, "r", encoding"utf-8") as f:
