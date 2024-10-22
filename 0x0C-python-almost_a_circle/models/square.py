@@ -2,10 +2,11 @@
 
 """
 A class square that inherits from
-rectangle 
+rectangle
 """
 
 from models.rectangle import Rectangle
+
 
 class Square(Rectangle):
     """
@@ -56,5 +57,7 @@ class Square(Rectangle):
                     self.width = value
                 if key == "height":
                     self.height = value
-
-
+                if key == "x":
+                    self.x = value
+                if key == "y":
+                    self.y = value
