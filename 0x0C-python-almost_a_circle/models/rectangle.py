@@ -155,8 +155,18 @@ class Rectangle(Base):
                     self.x = value
                 elif key == "y":
                     self.y = value
-                """
-                 removed the break statement, incase if the passed args are greater
-                 than 5, and one of the attributes is at the end
-                """
 
+    def to_dictionary(self):
+        """
+        func to return dictionary representation
+        of a rectange
+        """
+
+        rectangle_dict = {
+                "id": self.id,
+                "width": self.width
+                "height": self.height
+                "x": self.x
+                "y": self.y
+                }
+        return rectangle_dict
