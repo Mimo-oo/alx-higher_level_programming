@@ -76,9 +76,10 @@ class Base:
         """
         Returns a list of instance
         """
-        filename = cls.__name__ + ".json"
+        file_name = cls.__name__ + ".json"
+
         try:
-            with open(filename, "r", encoding="utf-8") as f:
+            with open(file_name, "r", encoding="utf-8") as f:
                 list_dict = Base.from_json_string(f.read())
 
                 list_instances = []
