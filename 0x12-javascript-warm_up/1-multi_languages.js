@@ -1,11 +1,4 @@
 #!/usr/bin/node
-// prints 3 lines
+// It prints 3 lines
 
-
-let c = 'C is fun';
-let python = 'Python is cool';
-let javascript = 'Javascript is amazing';
-
-console.log(c);
-console.log(python);
-console.log(javascript);
+console.log('C is fun\nPython is cool\nJavascript is amazing');
