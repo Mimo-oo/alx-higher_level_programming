@@ -3,8 +3,6 @@
 Python Script that takes in a URL, sends a request to the URL
 & displays the body of the response
 """
-import requests
-from sys import argv
 
 if __name__ == '__main__':
     import requests
